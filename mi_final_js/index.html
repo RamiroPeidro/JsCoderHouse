@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier Web</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+</head>
+<body>
+    <div class="contenedor-general">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">PW</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <section class='header'>
+            <div class="container-fluid header__container">
+                <div class="row justify-content-center align-items-center about-me-container">
+                    <div class="col-md-7">
+                        <h1 class="h1-writter">.</h1>
+                        <p class="p-writter">.</p>
+                        <form class="form-comienzo">
+                          <input id="input-general" type="text" placeholder="Ingrese un equipo de la Premier League para comenzar...">
+                          <button id="obtener-equipo" class="btn btn-primary">Comenzar</button>
+                          <button id="reiniciar" class="btn btn-danger">Reiniciar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>    
+
+    <div id="informacion_equipo">
+    </div>
+
+    <div class="accordion" id="informacion_equipo_2">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button accordionButton1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Ultimos resultados
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body accordion1">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="informacion_equipo_3">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button accordionButton2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            Ultimos resultados
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body accordion2">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div id="contenedor-modal">
+    <div class="modal" id="modalMasInfo" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Que otra información desea saber?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Elija entre las siguientes opciones</p>
+          </div>
+          
+          <select class="form-select" id='select-opciones'aria-label="Default select example">
+              <option selected>Seleccione una opcion...</option>
+              <option value="1">Ultimos resultados</option>
+              <option value="2">Proximos partidos</option>
+          </select>
+
+          <div class="modal-footer">
+            <button type="button" id="enviar-adicional" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="contenedor-modal2">
+    <div class="modal" id="modalError" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content modal-content2">
+          <div class="modal-header">
+            <h5 class="modal-title">Para obtener la info de otro equipo presione el boton de reiniciar.</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/type1.js"></script>
+    <script src="js/api-prueba.js"></script>
+</body>
+</html>
